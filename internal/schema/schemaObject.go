@@ -41,8 +41,9 @@ func (s *Schema) AddSchemaObject(obj any) {
 }
 
 type Properties struct {
-	Type  string      `yaml:"type,omitempty"`
-	Items ItemsObject `yaml:"items,omitempty"`
+	Type   string      `yaml:"type,omitempty"`
+	Format string      `yaml:"format,omitempty"`
+	Items  ItemsObject `yaml:"items,omitempty"`
 }
 
 type ItemsObject struct {

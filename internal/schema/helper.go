@@ -78,6 +78,10 @@ func fieldToSchema(f reflect.StructField) *Properties {
 
 	prop.Type = tag.Typ
 
+	if len(tag.Format) != 0 {
+		prop.Format = tag.Format
+	}
+
 	if tag.Ref {
 		prop.Items.Ref = fmt.Sprintf("#/components/schemas/%s", tag.Items)
 	} else {
